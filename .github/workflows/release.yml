@@ -33,4 +33,4 @@ jobs:
       - if: success()
         name : Run
         run: |
-          echo 'New version is released!'  
+          echo 'The push notification is success!'
