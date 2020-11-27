@@ -33,4 +33,4 @@ jobs:
       - if: success()
         name : Run
         run: |
-          echo 'Start!'  
+          echo 'New version is released!'  
