@@ -23,7 +23,7 @@ jobs:
           args: release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-      - name: whatsapp-notify
+      - name: Notify release result
         id: whatsapp-notify
         env:
           account_sid: ${{ secrets.account_sid }}
