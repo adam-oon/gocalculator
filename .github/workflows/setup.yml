@@ -26,7 +26,7 @@ jobs:
           go get github.com/tebeka/go2xunit
       - if: ${{success()}}
         run: |
-          go get github.com/franela/goblin
+          go get github.com/franela/goblinx
       - if: ${{success()}}
         name: Test Go Goblin
         run: |
