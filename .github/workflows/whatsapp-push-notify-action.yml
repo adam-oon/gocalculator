@@ -1,7 +1,8 @@
 name: Notify through Whatsapp
 
 on:
-  push: [release-patch-1]
+  push:
+    branches: [release-patch-1]
 jobs:
   build:
     runs-on: ubuntu-latest
