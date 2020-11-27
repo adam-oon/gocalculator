@@ -23,3 +23,14 @@ jobs:
           args: release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: whatsapp-notify
+        id: whatsapp-notify
+        env:
+          account_sid: ${{ secrets.account_sid }}
+          auth_token: ${{ secrets.auth_token }}
+          to_whatsapp_no: ${{ secrets.to_whatsapp_no }}
+        uses: ishween/whatsapp-push-notify-action@master
+      - if: success()
+        name : Run
+        run: |
+          echo 'Start!'  
