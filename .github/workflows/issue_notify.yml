@@ -1,0 +1,23 @@
+name:  Issues Whatsapp Notify
+on:
+  issue_comment:
+    types: created
+  issues:
+    types: [opened, reopened]
+  page_build:
+  watch:
+    types: [started]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: wa-notify
+        uses: mdb571/wa-action@master
+        with:
+          from: ${{ secrets.FROM }}
+          to: ${{secrets.TO_WHATSAPP_NO }}
+        env:
+          TWILIO_ACCOUNT_SID: ${{ secrets.ACCOUNT_SID }}
+          TWILIO_AUTH_TOKEN: ${{ secrets.AUTH_TOKEN }}
