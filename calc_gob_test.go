@@ -20,7 +20,7 @@ func TestAdd(t *testing.T) {
 
 	gob.Describe("Calculator Subtract Operations", func() {
 		gob.It("it should subract second integer from first integer", func() {
-			gob.Assert(Subtract(20, 1)).Equal(19)
+			gob.Assert(Subtract(20, 1)).Equal(18)
 			gob.Assert(Subtract(49, 150)).Equal(-101)
 			gob.Assert(Subtract(-4, 2)).Equal(-6)
 		})
